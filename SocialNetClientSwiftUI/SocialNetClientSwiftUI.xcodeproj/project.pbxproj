@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5B24DF43288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24DF42288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift */; };
-		5B24DF45288E70AF0092A150 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24DF44288E70AF0092A150 /* ContentView.swift */; };
 		5B24DF47288E70B00092A150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B24DF46288E70B00092A150 /* Assets.xcassets */; };
 		5B24DF4A288E70B00092A150 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B24DF49288E70B00092A150 /* Preview Assets.xcassets */; };
+		5BB64BAF2893B36800696962 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB64BAE2893B36800696962 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B24DF3F288E70AF0092A150 /* SocialNetClientSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetClientSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B24DF42288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetClientSwiftUIApp.swift; sourceTree = "<group>"; };
-		5B24DF44288E70AF0092A150 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5B24DF46288E70B00092A150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B24DF49288E70B00092A150 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BB64BAE2893B36800696962 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +51,9 @@
 		5B24DF41288E70AF0092A150 /* SocialNetClientSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				5B24DF42288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift */,
-				5B24DF44288E70AF0092A150 /* ContentView.swift */,
-				5B24DF46288E70B00092A150 /* Assets.xcassets */,
-				5B24DF48288E70B00092A150 /* Preview Content */,
+				5BB64BB22893B38200696962 /* Core */,
+				5BB64BB12893B37600696962 /* Screens */,
+				5BB64BB32893B3A100696962 /* Assets */,
 			);
 			path = SocialNetClientSwiftUI;
 			sourceTree = "<group>";
@@ -65,6 +64,39 @@
 				5B24DF49288E70B00092A150 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5BB64BB02893B36E00696962 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5BB64BAE2893B36800696962 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5BB64BB12893B37600696962 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5BB64BB02893B36E00696962 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5BB64BB22893B38200696962 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5B24DF42288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5BB64BB32893B3A100696962 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5B24DF46288E70B00092A150 /* Assets.xcassets */,
+				5B24DF48288E70B00092A150 /* Preview Content */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B24DF45288E70AF0092A150 /* ContentView.swift in Sources */,
+				5BB64BAF2893B36800696962 /* LoginView.swift in Sources */,
 				5B24DF43288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SocialNetClientSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SocialNetClientSwiftUI/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = GTWUX2NLLN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SocialNetClientSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SocialNetClientSwiftUI/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = GTWUX2NLLN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

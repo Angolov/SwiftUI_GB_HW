@@ -10,7 +10,9 @@
 		5B24DF43288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24DF42288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift */; };
 		5B24DF47288E70B00092A150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B24DF46288E70B00092A150 /* Assets.xcassets */; };
 		5B24DF4A288E70B00092A150 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B24DF49288E70B00092A150 /* Preview Assets.xcassets */; };
-		5BB64BAF2893B36800696962 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB64BAE2893B36800696962 /* LoginView.swift */; };
+		5B33214A289837E900900141 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B332149289837E900900141 /* LoginFormView.swift */; };
+		5B33214C289837F700900141 /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33214B289837F700900141 /* SignUpFormView.swift */; };
+		5BB64BAF2893B36800696962 /* MainLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB64BAE2893B36800696962 /* MainLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +20,9 @@
 		5B24DF42288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetClientSwiftUIApp.swift; sourceTree = "<group>"; };
 		5B24DF46288E70B00092A150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B24DF49288E70B00092A150 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5BB64BAE2893B36800696962 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5B332149289837E900900141 /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		5B33214B289837F700900141 /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		5BB64BAE2893B36800696962 /* MainLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 		5BB64BB02893B36E00696962 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				5BB64BAE2893B36800696962 /* LoginView.swift */,
+				5BB64BAE2893B36800696962 /* MainLoginView.swift */,
+				5B332149289837E900900141 /* LoginFormView.swift */,
+				5B33214B289837F700900141 /* SignUpFormView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -169,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB64BAF2893B36800696962 /* LoginView.swift in Sources */,
+				5BB64BAF2893B36800696962 /* MainLoginView.swift in Sources */,
+				5B33214C289837F700900141 /* SignUpFormView.swift in Sources */,
+				5B33214A289837E900900141 /* LoginFormView.swift in Sources */,
 				5B24DF43288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@ struct SignUp: View {
     @State private var password = ""
     @State private var repeatedPassword = ""
     @Binding var formIndex: Int
+    @Binding var isLoggedIn: Bool
     
     // MARK: - Body
     
@@ -34,7 +35,7 @@ struct SignUp: View {
             .background(backgroundColor)
             .clipShape(SignUpTab())
             .contentShape(SignUpTab())
-            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: -5)
+            .shadow(color: .black.opacity(0.7), radius: 10, x: 5, y: 10)
             .cornerRadius(15)
             
             signUpButton
@@ -113,6 +114,9 @@ struct SignUp: View {
     private var signUpButton: some View {
         Button {
             print("Sign up pressed")
+            if checkSignUp() {
+                isLoggedIn.toggle()
+            }
         } label: {
             Text("SIGN UP")
                 .font(.system(size: 20, weight: .heavy, design: .default))
@@ -129,6 +133,12 @@ struct SignUp: View {
         return color
     }
     
+    // MARK: - Private methods
+    
+    private func checkSignUp() -> Bool {
+        // Some checking for signUp credentials
+        return true
+    }
 }
 
 // MARK: - SignUpTab shape
@@ -149,5 +159,11 @@ struct SignUpTab: Shape {
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: rect.height))
         }
+    }
+}
+
+struct SignUp_Previews: PreviewProvider {
+    static var previews: some View {
+        SignUp(formIndex: .constant(1), isLoggedIn: .constant(false))
     }
 }

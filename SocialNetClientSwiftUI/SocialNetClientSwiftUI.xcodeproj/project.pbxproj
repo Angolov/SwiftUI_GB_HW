@@ -12,6 +12,13 @@
 		5B24DF4A288E70B00092A150 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B24DF49288E70B00092A150 /* Preview Assets.xcassets */; };
 		5B33214A289837E900900141 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B332149289837E900900141 /* LoginFormView.swift */; };
 		5B33214C289837F700900141 /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33214B289837F700900141 /* SignUpFormView.swift */; };
+		5B332150289856B300900141 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33214F289856B300900141 /* MainTabBar.swift */; };
+		5B33215628991CD100900141 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33215528991CD100900141 /* FriendsView.swift */; };
+		5B33215828991CDC00900141 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33215728991CDC00900141 /* GroupsView.swift */; };
+		5B33215A28991CE400900141 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33215928991CE400900141 /* NewsView.swift */; };
+		5B33215C2899210600900141 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33215B2899210600900141 /* FriendCell.swift */; };
+		5B33215F2899284B00900141 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33215E2899284B00900141 /* AvatarView.swift */; };
+		5B3321612899292300900141 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3321602899292300900141 /* GroupCell.swift */; };
 		5BB64BAF2893B36800696962 /* MainLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB64BAE2893B36800696962 /* MainLoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +29,13 @@
 		5B24DF49288E70B00092A150 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5B332149289837E900900141 /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		5B33214B289837F700900141 /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		5B33214F289856B300900141 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		5B33215528991CD100900141 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		5B33215728991CDC00900141 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		5B33215928991CE400900141 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		5B33215B2899210600900141 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		5B33215E2899284B00900141 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		5B3321602899292300900141 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		5BB64BAE2893B36800696962 /* MainLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +71,7 @@
 			children = (
 				5BB64BB22893B38200696962 /* Core */,
 				5BB64BB12893B37600696962 /* Screens */,
+				5B33215D2899283A00900141 /* Views */,
 				5BB64BB32893B3A100696962 /* Assets */,
 			);
 			path = SocialNetClientSwiftUI;
@@ -68,6 +83,48 @@
 				5B24DF49288E70B00092A150 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B332151289856BD00900141 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5B33214F289856B300900141 /* MainTabBar.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		5B33215228991C9A00900141 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				5B33215B2899210600900141 /* FriendCell.swift */,
+				5B33215528991CD100900141 /* FriendsView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		5B33215328991CA400900141 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				5B3321602899292300900141 /* GroupCell.swift */,
+				5B33215728991CDC00900141 /* GroupsView.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		5B33215428991CAA00900141 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				5B33215928991CE400900141 /* NewsView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		5B33215D2899283A00900141 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B33215E2899284B00900141 /* AvatarView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5BB64BB02893B36E00696962 /* Login */ = {
@@ -84,6 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				5BB64BB02893B36E00696962 /* Login */,
+				5B332151289856BD00900141 /* MainTabBar */,
+				5B33215228991C9A00900141 /* Friends */,
+				5B33215328991CA400900141 /* Groups */,
+				5B33215428991CAA00900141 /* News */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -175,9 +236,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B33215628991CD100900141 /* FriendsView.swift in Sources */,
+				5B33215C2899210600900141 /* FriendCell.swift in Sources */,
+				5B33215A28991CE400900141 /* NewsView.swift in Sources */,
+				5B33215F2899284B00900141 /* AvatarView.swift in Sources */,
+				5B3321612899292300900141 /* GroupCell.swift in Sources */,
 				5BB64BAF2893B36800696962 /* MainLoginView.swift in Sources */,
 				5B33214C289837F700900141 /* SignUpFormView.swift in Sources */,
 				5B33214A289837E900900141 /* LoginFormView.swift in Sources */,
+				5B332150289856B300900141 /* MainTabBar.swift in Sources */,
+				5B33215828991CDC00900141 /* GroupsView.swift in Sources */,
 				5B24DF43288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

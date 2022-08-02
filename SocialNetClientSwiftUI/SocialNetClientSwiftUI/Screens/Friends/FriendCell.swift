@@ -21,7 +21,7 @@ struct FriendCell: View {
     var body: some View {
         HStack(alignment: .center, spacing: 15) {
             AvatarView(image: $friendImage)
-                .frame(width: 50, height: 50)
+                .frame(width: 40, height: 40)
             friendNameText
             Spacer(minLength: 0)
         }
@@ -33,7 +33,7 @@ struct FriendCell: View {
     
     private var friendNameText: some View {
         Text(friendName)
-            .font(.system(size: 20))
+            .font(.system(size: 16))
             .fontWeight(.medium)
             .lineLimit(1)
     }

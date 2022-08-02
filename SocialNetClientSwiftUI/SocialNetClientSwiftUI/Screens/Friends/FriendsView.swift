@@ -11,10 +11,25 @@ import SwiftUI
 
 struct FriendsView: View {
     
+    @State private var friends = FriendViewModel()
+    
     // MARK: - Body
     
     var body: some View {
-        FriendCell(friendImage: .constant(UIImage()), friendName: .constant("Some Friend"))
+        NavigationView{
+            List {
+                ForEach(friends.myFriends) { friendSection in
+                    Section("\(friendSection.sectionChar)") {
+                        ForEach(friendSection.friends) { friend in
+                            FriendCell(friendImage: .constant(UIImage()), friendName: .constant(friend.fullName))
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Friends", displayMode: .inline)
+            .listStyle(PlainListStyle())
+        }
+        
     }
 }
 

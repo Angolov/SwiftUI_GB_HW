@@ -20,6 +20,7 @@
 		5B33215F2899284B00900141 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33215E2899284B00900141 /* AvatarView.swift */; };
 		5B3321612899292300900141 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3321602899292300900141 /* GroupCell.swift */; };
 		5B33216428993A4D00900141 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33216328993A4D00900141 /* MainNavigationView.swift */; };
+		5B3321672899436200900141 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3321662899436200900141 /* Friend.swift */; };
 		5BB64BAF2893B36800696962 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB64BAE2893B36800696962 /* AuthorizationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		5B33215E2899284B00900141 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		5B3321602899292300900141 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		5B33216328993A4D00900141 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
+		5B3321662899436200900141 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		5BB64BAE2893B36800696962 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 		5B24DF41288E70AF0092A150 /* SocialNetClientSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5B3321652899434F00900141 /* ViewModels */,
 				5BB64BB22893B38200696962 /* Core */,
 				5BB64BB12893B37600696962 /* Screens */,
 				5B33216228993A3F00900141 /* Navigation */,
@@ -136,6 +139,14 @@
 				5B33216328993A4D00900141 /* MainNavigationView.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		5B3321652899434F00900141 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B3321662899436200900141 /* Friend.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		5BB64BB02893B36E00696962 /* Login */ = {
@@ -258,6 +269,7 @@
 				5B33214A289837E900900141 /* LoginFormView.swift in Sources */,
 				5B332150289856B300900141 /* MainTabBar.swift in Sources */,
 				5B33215828991CDC00900141 /* GroupsView.swift in Sources */,
+				5B3321672899436200900141 /* Friend.swift in Sources */,
 				5B24DF43288E70AF0092A150 /* SocialNetClientSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

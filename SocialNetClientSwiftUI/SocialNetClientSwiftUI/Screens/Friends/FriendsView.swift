@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+// MARK: - FriendsView struct
+
 struct FriendsView: View {
+    
+    // MARK: - Body
+    
     var body: some View {
-        Text("Here will be friends")
+        FriendCell(friendImage: .constant(UIImage()), friendName: .constant("Some Friend"))
     }
 }
 

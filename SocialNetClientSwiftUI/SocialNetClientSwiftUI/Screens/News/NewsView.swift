@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+// MARK: - NewsView struct
+
 struct NewsView: View {
+    
+    // MARK: - Body
+    
     var body: some View {
         Text("Here will be news")
     }

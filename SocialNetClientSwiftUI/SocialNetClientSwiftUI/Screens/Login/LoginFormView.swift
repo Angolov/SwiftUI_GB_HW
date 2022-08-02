@@ -124,11 +124,11 @@ struct Login: View {
     
     private var loginButton: some View {
         Button {
-//            if areCredentialsCorrect() {
+            if areCredentialsCorrect() {
                 withAnimation {
                     isLoggedIn = true
                 }
-//            }
+            }
         } label: {
             Text("LOG IN")
                 .font(.system(size: 20))

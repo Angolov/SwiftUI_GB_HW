@@ -19,10 +19,19 @@ struct FriendsView: View {
         NavigationView{
             List {
                 ForEach(friends.myFriends) { friendSection in
-                    Section("\(friendSection.sectionChar)") {
+                    Section {
                         ForEach(friendSection.friends) { friend in
-                            FriendCell(friendImage: .constant(UIImage()), friendName: .constant(friend.fullName))
+                            NavigationLink {
+                                FriendGalleryView(friend: friend)
+                            } label: {
+                                FriendCell(friendImage: UIImage(named: "avatar") ?? UIImage(),
+                                           friendName: friend.fullName)
+                            }
                         }
+                    } header: {
+                        Text("\(friendSection.sectionChar)")
+                            .foregroundColor(.black)
+                            .fontWeight(.bold)
                     }
                 }
             }

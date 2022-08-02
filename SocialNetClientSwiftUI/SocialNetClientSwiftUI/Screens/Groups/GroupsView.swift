@@ -14,9 +14,9 @@ struct GroupsView: View {
     // MARK: - Body
     
     var body: some View {
-        GroupCell(groupImage: .constant(UIImage()),
-                  groupName: .constant("Some Group"),
-                  groupDescription: .constant("Some group description"))
+        GroupCell(groupImage: UIImage(named: "photo") ?? UIImage(),
+                  groupName: "Some Group",
+                  groupDescription: "Some group description")
     }
 }
 

@@ -15,6 +15,9 @@ struct Login: View {
     
     @State private var email = ""
     @State private var password = ""
+    @State private var showEmptyFieldsAlert = false
+    @State private var showLoginAlert = false
+    
     @Binding var formIndex: Int
     @Binding var isLoggedIn: Bool
     
@@ -40,6 +43,16 @@ struct Login: View {
             loginButton
                 .offset(y: 20)
                 .opacity(self.formIndex == 0 ? 1 : 0)
+                .alert("Error", isPresented: $showEmptyFieldsAlert, actions: {
+                    
+                }, message: {
+                    Text("Email or password cannot be empty. Please try again.")
+                })
+                .alert("Error", isPresented: $showLoginAlert, actions: {
+                    
+                }, message: {
+                    Text("Email or password is not correct. Please try again.")
+                })
         }
         .onTapGesture {
             self.formIndex = 0
@@ -111,13 +124,15 @@ struct Login: View {
     
     private var loginButton: some View {
         Button {
-            print("Login pressed")
-            if checkLogin() {
-                isLoggedIn.toggle()
-            }
+//            if areCredentialsCorrect() {
+                withAnimation {
+                    isLoggedIn = true
+                }
+//            }
         } label: {
             Text("LOG IN")
-                .font(.system(size: 20, weight: .heavy, design: .default))
+                .font(.system(size: 20))
+                .fontWeight(.heavy)
         }
         .frame(width: 100, height: 42)
         .foregroundColor(.white)
@@ -133,8 +148,24 @@ struct Login: View {
     
     // MARK: - Private methods
     
-    private func checkLogin() -> Bool {
-        // Some checking for login credentials
+    private func areCredentialsCorrect() -> Bool {
+        guard isEmailOrPassFieldEmpty() else { return false }
+        
+        if email == "admin@yandex.ru",
+           password == "12345" {
+            return true
+        }
+        
+        showLoginAlert = true
+        return false
+    }
+    
+    private func isEmailOrPassFieldEmpty() -> Bool {
+        if email == "" || password == "" {
+            showEmptyFieldsAlert = true
+            return false
+        }
+        
         return true
     }
 }

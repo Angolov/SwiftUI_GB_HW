@@ -20,8 +20,10 @@ struct AuthorizationView: View {
     
     var body: some View {
         VStack() {
+            Spacer()
+            
             title
-                .padding(.top, 50)
+            
             Spacer()
             
             ZStack {
@@ -39,8 +41,9 @@ struct AuthorizationView: View {
     
     private var title: some View {
         Text("Social Net Client")
-            .padding()
             .font(.system(size: 36, weight: .heavy, design: .rounded))
+            .multilineTextAlignment(.center)
+            .padding()
             .shadow(color: .black.opacity(0.3), radius: 5, x: 5, y: 5)
             .foregroundColor(.white)
     }

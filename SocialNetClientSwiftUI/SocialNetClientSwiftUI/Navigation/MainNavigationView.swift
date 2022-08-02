@@ -20,6 +20,7 @@ struct MainNavigationView: View {
     var body: some View {
         if isLoggedIn {
             MainTabBar()
+                .transition(.move(edge: .trailing))
         } else {
             AuthorizationView(isLoggedIn: $isLoggedIn)
         }

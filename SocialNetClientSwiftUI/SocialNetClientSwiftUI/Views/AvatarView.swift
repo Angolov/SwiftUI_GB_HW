@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct AvatarView: View {
-    @Binding var image: UIImage
+    @State var image: UIImage
     
     var body: some View {
         Image(uiImage: image)
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .background(Color.green)
             .clipShape(Circle())
             .contentShape(Circle())
@@ -25,6 +25,6 @@ struct AvatarView: View {
 
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarView(image: .constant(UIImage()))
+        AvatarView(image: UIImage())
     }
 }

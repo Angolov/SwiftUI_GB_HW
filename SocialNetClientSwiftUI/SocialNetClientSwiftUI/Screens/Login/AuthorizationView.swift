@@ -1,5 +1,5 @@
 //
-//  MainLoginView.swift
+//  AuthorizationView.swift
 //  SocialNetClientSwiftUI
 //
 //  Created by Антон Головатый on 29.07.2022.
@@ -7,17 +7,23 @@
 
 import SwiftUI
 
-// MARK: - MainLoginView struct
+// MARK: - AuthorizationView struct
 
-struct MainLoginView: View {
+struct AuthorizationView: View {
+    
+    // MARK: - Properties
     
     @State private var formIndex = 0
     @Binding var isLoggedIn: Bool
     
+    // MARK: - Body
+    
     var body: some View {
         VStack() {
+            Spacer()
+            
             title
-                .padding(.top, 50)
+            
             Spacer()
             
             ZStack {
@@ -35,8 +41,9 @@ struct MainLoginView: View {
     
     private var title: some View {
         Text("Social Net Client")
-            .padding()
             .font(.system(size: 36, weight: .heavy, design: .rounded))
+            .multilineTextAlignment(.center)
+            .padding()
             .shadow(color: .black.opacity(0.3), radius: 5, x: 5, y: 5)
             .foregroundColor(.white)
     }
@@ -55,7 +62,7 @@ struct MainLoginView: View {
 
 struct MainLoginView_Previews: PreviewProvider {
     static var previews: some View {
-        MainLoginView(isLoggedIn: .constant(false))
+        AuthorizationView(isLoggedIn: .constant(false))
     }
 }
 

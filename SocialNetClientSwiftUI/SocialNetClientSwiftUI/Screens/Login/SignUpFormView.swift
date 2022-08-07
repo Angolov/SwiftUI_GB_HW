@@ -114,9 +114,7 @@ struct SignUp: View {
     private var signUpButton: some View {
         Button {
             print("Sign up pressed")
-            if checkSignUp() {
-                isLoggedIn.toggle()
-            }
+            checkSignUp()
         } label: {
             Text("SIGN UP")
                 .font(.system(size: 20, weight: .heavy, design: .default))
@@ -135,9 +133,8 @@ struct SignUp: View {
     
     // MARK: - Private methods
     
-    private func checkSignUp() -> Bool {
+    private func checkSignUp() {
         // Some checking for signUp credentials
-        return true
     }
 }
 

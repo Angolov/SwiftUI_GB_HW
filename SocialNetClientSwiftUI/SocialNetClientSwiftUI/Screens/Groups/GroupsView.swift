@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+// MARK: - GroupsView struct
+
 struct GroupsView: View {
+    
+    // MARK: - Body
+    
     var body: some View {
-        Text("Here will be groups")
+        GroupCell(groupImage: UIImage(named: "photo") ?? UIImage(),
+                  groupName: "Some Group",
+                  groupDescription: "Some group description")
     }
 }
 

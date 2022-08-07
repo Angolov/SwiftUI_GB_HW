@@ -7,15 +7,49 @@
 
 import SwiftUI
 
+// MARK: - MainTabSelection enum
+
+enum MainTabSelection: Int {
+    case friends
+    case groups
+    case news
+}
+
+// MARK: - MainTabBar struct
+
 struct MainTabBar: View {
-    @State private var isLoggedIn = false
+    
+    // MARK: - Properties
+    
+    @State private var selectedScreen = MainTabSelection.friends.rawValue
+    
+    // MARK: - Body
     
     var body: some View {
-        if !isLoggedIn {
-            MainLoginView(isLoggedIn: $isLoggedIn)
-        } else {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $selectedScreen) {
+            
+            FriendsView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("My Friends")
+                }
+                .tag(MainTabSelection.friends.rawValue)
+            
+            GroupsView()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("My Groups")
+                }
+                .tag(MainTabSelection.groups.rawValue)
+            
+            NewsView()
+                .tabItem {
+                    Image(systemName: "newspaper.fill")
+                    Text("My News")
+                }
+                .tag(MainTabSelection.news.rawValue)
         }
+        .font(.headline)
     }
 }
 

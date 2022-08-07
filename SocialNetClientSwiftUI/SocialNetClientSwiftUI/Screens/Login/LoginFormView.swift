@@ -16,6 +16,7 @@ struct Login: View {
     @State private var email = ""
     @State private var password = ""
     @Binding var formIndex: Int
+    @Binding var isLoggedIn: Bool
     
     // MARK: - Body
     
@@ -33,7 +34,7 @@ struct Login: View {
             .background(backgroundColor)
             .clipShape(LoginTab())
             .contentShape(LoginTab())
-            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: -5)
+            .shadow(color: .black.opacity(0.7), radius: 10, x: 5, y: 10)
             .cornerRadius(15)
             
             loginButton
@@ -111,6 +112,9 @@ struct Login: View {
     private var loginButton: some View {
         Button {
             print("Login pressed")
+            if checkLogin() {
+                isLoggedIn.toggle()
+            }
         } label: {
             Text("LOG IN")
                 .font(.system(size: 20, weight: .heavy, design: .default))
@@ -125,6 +129,13 @@ struct Login: View {
     private var backgroundColor: Color {
         let color = Color(#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1))
         return color
+    }
+    
+    // MARK: - Private methods
+    
+    private func checkLogin() -> Bool {
+        // Some checking for login credentials
+        return true
     }
 }
 
@@ -147,5 +158,11 @@ struct LoginTab: Shape {
             path.addLine(to: CGPoint(x: 0, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: 0))
         }
+    }
+}
+
+struct Login_Previews: PreviewProvider {
+    static var previews: some View {
+        Login(formIndex: .constant(0), isLoggedIn: .constant(false))
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct SocialNetClientSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            MainLoginView()
+            MainTabBar()
         }
     }
 }

@@ -33,21 +33,21 @@ struct MainTabBar: View {
                     Image(systemName: "person.fill")
                     Text("My Friends")
                 }
-                .tag(MainTabSelection.friends.rawValue)
+                .tag(MainTabSelection.friends)
             
             GroupsView()
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text("My Groups")
                 }
-                .tag(MainTabSelection.groups.rawValue)
+                .tag(MainTabSelection.groups)
             
             NewsView()
                 .tabItem {
                     Image(systemName: "newspaper.fill")
                     Text("My News")
                 }
-                .tag(MainTabSelection.news.rawValue)
+                .tag(MainTabSelection.news)
         }
         .font(.headline)
     }

@@ -35,8 +35,8 @@ struct SignUp: View {
             .background(backgroundColor)
             .clipShape(SignUpTab())
             .contentShape(SignUpTab())
-            .shadow(color: .black.opacity(0.7), radius: 10, x: 5, y: 10)
             .cornerRadius(15)
+            .shadow(color: .black.opacity(0.7), radius: 10, x: 5, y: 10)
             
             signUpButton
                 .offset(y: 20)
